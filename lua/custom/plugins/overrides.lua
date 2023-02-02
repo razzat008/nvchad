@@ -1,6 +1,7 @@
 local M = {}
 
 M.treesitter = {
+  auto_install = true,
   ensure_installed = {
     "vim",
     "lua",
