@@ -4,3 +4,4 @@ ftplugin
 coc-settings.json
 .luarc.json
 .gitignore
+.stylua.toml
