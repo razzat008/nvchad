@@ -5,7 +5,7 @@ M.general = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
 
     --close buffer
-    ["<leader>x"] = { ":bufdo close", "close buffer" },
+    -- ["<leader>x"] = { ":bufdo close", "close buffer" },
 
     --split window
     ["<leader>sv"] = { "<C-w>v", "split vertically" },
