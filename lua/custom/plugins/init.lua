@@ -13,7 +13,7 @@ local plugins = {
   },
 
   ["ggandor/lightspeed.nvim"] = {
-    after = "alpha",
+ --   after = "alpha",
     disable = false,
     config = function()
       require "custom.plugins.lightspeed"
