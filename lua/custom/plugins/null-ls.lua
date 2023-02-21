@@ -23,7 +23,7 @@ local sources = {
 
   -- b.diagnostics.phpmd,
   -- b.diagnostics.cpplint,
-  b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
+  -- b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
   b.diagnostics.eslint_d.with { -- js/ts linter
     condition = function(utils)
       return utils.root_has_file ".eslintrc.js" -- change file extension if you use something else
