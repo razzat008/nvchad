@@ -107,7 +107,7 @@ M.capabilities.textDocument.completion.completionItem = {
 -- }
 
 -- this is replacement for the above commented lines of codes
-local servers = { "html", "cssls", "pyright", "tsserver", "sumneko_lua", "clangd" }
+local servers = { "html", "cssls", "pyright", "tsserver", "lua_ls", "clangd" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
