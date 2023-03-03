@@ -51,6 +51,14 @@ local plugins = {
 
   -- remove plugin
   -- ["hrsh7th/cmp-path"] = false,
+  -- markdown previewer
+  ["toppair/peek.nvim"]  = {
+    run = 'deno taks --quiet build:fast',
+    disable = false,
+    config = function ()
+      require("custom.plugins.markpreviewer")
+    end,
+  }
 }
 
 return plugins
