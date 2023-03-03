@@ -23,6 +23,7 @@ M.mason = {
     "python-lsp-server",
     "rust-analyzer",
     "alex",
+    "deno",
     "stylua",
     "usort",
     "prettierd",
