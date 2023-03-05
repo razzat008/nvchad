@@ -52,7 +52,7 @@ local plugins = {
   ["NvChad/ui"] = {
     override_options = {
       statusline = {
-        separator_style = "round",
+        separator_style = "block", -- default/round/block/arrow
         overriden_modules = function()
           return require "custom.statusline"
         end,
