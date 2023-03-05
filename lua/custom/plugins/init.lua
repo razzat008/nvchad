@@ -13,7 +13,7 @@ local plugins = {
   },
 
   ["ggandor/lightspeed.nvim"] = {
- --   after = "alpha",
+    --   after = "alpha",
     disable = false,
     config = function()
       require "custom.plugins.lightspeed"
@@ -49,16 +49,27 @@ local plugins = {
     end,
   },
 
+  ["NvChad/ui"] = {
+    override_options = {
+      statusline = {
+        separator_style = "round",
+        overriden_modules = function()
+          return require "custom.statusline"
+        end,
+      },
+    },
+  },
+
   -- remove plugin
   -- ["hrsh7th/cmp-path"] = false,
   -- markdown previewer
-  ["toppair/peek.nvim"]  = {
-    run = 'deno taks --quiet build:fast',
+  ["toppair/peek.nvim"] = {
+    run = "deno taks --quiet build:fast",
     disable = false,
-    config = function ()
-      require("custom.plugins.markpreviewer")
+    config = function()
+      require "custom.plugins.markpreviewer"
     end,
-  }
+  },
 }
 
 return plugins
