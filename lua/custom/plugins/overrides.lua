@@ -4,6 +4,8 @@ M.treesitter = {
   auto_install = true,
   ensure_installed = {
     "vim",
+    "bash",
+    "javascript",
     "lua",
     "html",
     "css",
