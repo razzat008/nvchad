@@ -70,6 +70,13 @@ local plugins = {
       require "custom.plugins.markpreviewer"
     end,
   },
+  ["sar/cmp-cmdline.nvim"] = {
+    config = function()
+      require "custom.plugins.cmpcmdline"
+    end,
+    enable = true,
+    -- after = "cmp-buffer",
+  },
 }
 
 return plugins
