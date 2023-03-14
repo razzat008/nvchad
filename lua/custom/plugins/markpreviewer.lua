@@ -11,7 +11,7 @@ local options = {
   close_on_bdelete = true,
   theme = "dark",
   auto_load = true,
-  app = "chromium",
+  app = "webview",
 }
 
 mpreview.setup(options)
