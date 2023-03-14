@@ -10,7 +10,7 @@ g.theme_switcher_loaded = false
 opt.laststatus = 3 -- global statusline
 opt.showmode = false
 
-opt.clipboard = "unnamedplus"
+-- opt.clipboard = "unnamedplus"
 opt.cursorline = true
 
 -- Indenting
