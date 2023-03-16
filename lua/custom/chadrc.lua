@@ -5,11 +5,11 @@ local highlights = require "custom.highlights"
 
 M.ui = {
   theme_toggle = { "gatekeeper", "decay" },
-  theme = "decay",
+  theme = "gruvbox",
   hl_override = highlights.override,
   hl_add = highlights.add,
 
-  transparency = false,
+  transparency = true,
 }
 
 M.plugins = require "custom.plugins"
