@@ -67,7 +67,7 @@ local plugins = {
     run = "deno taks --quiet build:fast",
     disable = false,
     config = function()
-      require "custom.plugins.markpreviewer"
+      require "custom.plugins.peek"
     end,
   },
   ["sar/cmp-cmdline.nvim"] = {
