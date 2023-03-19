@@ -5,8 +5,8 @@ local M = {}
 local highlights = require("custom.highlights")
 
 M.ui = {
-	theme = "onedark",
-	theme_toggle = { "onedark", "one_light" },
+	theme = "github_dark",
+	theme_toggle = { "github_dark", "one_light" },
 	transparency = false,
 
 	hl_override = highlights.override,
@@ -14,7 +14,8 @@ M.ui = {
 
 	--statusline
 	statusline = {
-		separator_style = "block",
+    theme = "minimal", -- default/vscode/vscode_colored/minimal
+		separator_style = "block", -- round/default/block
 	},
 
 	nvdash = {
