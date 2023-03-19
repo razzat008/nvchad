@@ -5,6 +5,7 @@ local g = vim.g
 
 -- for numbers
 opt.relativenumber = true
+opt.wrap = false
 
 -- vim.api.nvim_create_user_command('PeekOpen', require('peek').open, {})
 
@@ -15,4 +16,3 @@ autocmd("VimResized", {
   pattern = "*",
   command = "tabdo wincmd =",
 })
-
