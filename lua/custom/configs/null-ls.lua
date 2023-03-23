@@ -9,14 +9,36 @@ local b = null_ls.builtins
 local sources = {
 
   -- webdev stuff
-  b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
-  b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } }, -- so prettier works only on these filetypes
+  -- b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
+  -- b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } }, -- so prettier works only on these filetypes
+  --
+  -- -- Lua
+  -- b.formatting.stylua,
+  --
+  -- -- cpp
+  -- b.formatting.clang_format,
+
+  -- webdev stuff
+  b.formatting.deno_fmt,
+  b.formatting.usort,
+  b.formatting.prettierd.with { filetypes = { "html", "js", "css", "markdown" } },
+  -- b.formatting.prettier,
+  b.formatting.clang_format,
 
   -- Lua
   b.formatting.stylua,
 
-  -- cpp
-  b.formatting.clang_format,
+  -- Shell
+  -- b.formatting.shfmt,
+
+  -- b.diagnostics.phpmd,
+  -- b.diagnostics.cpplint,
+  -- b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
+  b.diagnostics.eslint_d.with { -- js/ts linter
+    condition = function(utils)
+      return utils.root_has_file ".eslintrc.js" -- change file extension if you use something else
+    end,
+  },
 }
 
 null_ls.setup {
