@@ -16,3 +16,5 @@ autocmd("VimResized", {
   pattern = "*",
   command = "tabdo wincmd =",
 })
+
+g.luasnippets_path = { vim.fn.stdpath "config" .. "/lua/custom/snippets" }
