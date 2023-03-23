@@ -3,5 +3,6 @@ spell
 ftplugin
 coc-settings.json
 .luarc.json
-.gitignore
+gitignore
 .stylua.toml
+lazy-lock.json
