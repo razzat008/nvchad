@@ -1,0 +1,27 @@
+{
+  "Standard Starter Template": {
+    "prefix": "sst",
+    "body": [
+      "#include <stdio.h>",
+      "",
+      "int main(int argc, char *argv[]){",
+      "$0",
+      "",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "Standard starter template for a tiny C program"
+  },
+  "main() template": {
+    "prefix": "main",
+    "body": [
+      "int main(int argc, char *argv[]){",
+      "$0",
+      "",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "Standard main() snippet"
+  }
+  }
+
