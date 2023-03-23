@@ -5,9 +5,9 @@ local M = {}
 local highlights = require("custom.highlights")
 
 M.ui = {
-	theme = "github_dark",
-	theme_toggle = { "github_dark", "one_light" },
-	transparency = false,
+	theme = "chadracula",
+	theme_toggle = { "chadracula", "one_light" },
+	transparency = true,
 
 	hl_override = highlights.override,
 	hl_add = highlights.add,
