@@ -12,10 +12,11 @@ M.general = {
 
     --split window
     ["<leader>sv"] = { "<C-w>v", "split vertically" },
+    -- lazygit
+    -- ["<leader>lg"] = { "<cmd>lazygit<cr>","open lazygit" },
   },
 }
 
 -- more keybinds!
 
 return M
-
