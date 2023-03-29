@@ -72,6 +72,7 @@ local plugins = {
 	{
 		"ggandor/lightspeed.nvim",
 		lazy = true,
+    enabled=false,
 		config = function()
 			require("custom.configs.lightspeed")
 		end,
