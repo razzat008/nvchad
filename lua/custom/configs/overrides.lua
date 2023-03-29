@@ -15,7 +15,6 @@ M.treesitter = {
 	indent = {
 		enable = true,
 		disable = {
-			"python",
 		},
 	},
 }
@@ -26,6 +25,7 @@ M.mason = {
 		"html-lsp",
 		"css-lsp",
 		"clangd",
+		"clang-format",
 		"cpplint",
 		"python-lsp-server",
 		"rust-analyzer",
