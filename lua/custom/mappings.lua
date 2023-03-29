@@ -10,12 +10,12 @@ M.general = {
     -- basic stuffs from theprimegen
     ["<C-u>"] = { "<C-u>zz", "move half page up" },
     ["<C-d>"] = { "<C-d>zz", "move half page down" },
-    ["<C-w>"] = {
-      function()
-        require("nvchad_ui.tabufline").close_buffer()
-      end,
-      "close buffer",
-    },
+    -- ["<C-w>"] = {
+    --   function()
+    --     require("nvchad_ui.tabufline").close_buffer()
+    --   end,
+    --   "close buffer",
+    -- },
 
     --split window
     ["<leader>sv"] = { "<C-w>v", "split vertically" },
