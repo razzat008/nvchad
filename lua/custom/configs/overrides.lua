@@ -29,12 +29,14 @@ M.mason = {
 		"cpplint",
 		"python-lsp-server",
 		"rust-analyzer",
+    "typescript-language-server",
 		"alex",
 		"deno",
 		"stylua",
 		"usort",
 		"prettierd",
 		"cssmodules-language-server",
+		"bash-language-server",
 	},
 }
 

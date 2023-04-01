@@ -5,7 +5,7 @@ local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
 
-local servers = { "html", "cssls", "pyright", "tsserver", "lua_ls", "clangd" }
+local servers = { "html", "cssls", "pyright", "tsserver", "lua_ls", "clangd", "bashls" }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
@@ -16,4 +16,8 @@ end
 --
 lspconfig.clangd.setup {
   filetypes = { "c", "cpp" },
+}
+
+lspconfig.tsserver.setup {
+  filetypes = { "js", "ts" },
 }

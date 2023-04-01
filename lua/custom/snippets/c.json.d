@@ -226,21 +226,21 @@
     "body": ["exit($0);"],
     "description": "exit() snippet"
   },
-  "for": {
-    "prefix": "for",
+  "for custom type": {
+    "prefix": "fort",
     "body": [
       "for (size_t ${2:i} = 0; $2 < ${1:count}; $2++) {$0",
       "}"
     ],
-    "description": "Mostly used 'for' loop"
+    "description": "Mostly used 'for' loop with custom type"
   },
-  "for custom type": {
-    "prefix": "fort",
+  "for": {
+    "prefix": "for",
     "body": [
       "for (${1:int} ${2:i} = 0; $2 < ${4:count}; $2++) {$0",
       "}"
     ],
-    "description": "Mostly used 'for' loop with custom type"
+    "description": "Mostly used 'for' loop"
   },
   "for non-zero start": {
     "prefix": "for1",
