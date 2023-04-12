@@ -34,6 +34,8 @@ M.mason = {
 		"deno",
 		"stylua",
 		"usort",
+    "mypy",
+    "luacheck",
 		"prettierd",
 		"cssmodules-language-server",
 		"bash-language-server",
