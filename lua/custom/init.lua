@@ -6,6 +6,7 @@ local g = vim.g
 -- for numbers
 opt.relativenumber = true
 opt.wrap = false
+opt.iskeyword:append("-", "_")
 
 -- vim.api.nvim_create_user_command('PeekOpen', require('peek').open, {})
 
