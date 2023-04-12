@@ -71,7 +71,8 @@ local plugins = {
   -- easy navigation
   {
     "ggandor/lightspeed.nvim",
-    enabled = false,
+    enabled = true,
+    event = "VeryLazy",
     config = function()
       require "custom.configs.lightspeed"
     end,
