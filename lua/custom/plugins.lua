@@ -70,12 +70,12 @@ local plugins = {
 
   -- easy navigation
   {
-    "ggandor/leap.nvim",
+    "ggandor/lightspeed.nvim",
     enabled = true,
     -- event = "VeryLazy",
     keys = "s",
     config = function()
-      require "custom.configs.leap"
+      require "custom.configs.lightspeed"
     end,
   },
 
