@@ -70,11 +70,12 @@ local plugins = {
 
   -- easy navigation
   {
-    "ggandor/lightspeed.nvim",
+    "ggandor/leap.nvim",
     enabled = true,
-    event = "VeryLazy",
+    -- event = "VeryLazy",
+    keys = "s",
     config = function()
-      require "custom.configs.lightspeed"
+      require "custom.configs.leap"
     end,
   },
 
@@ -82,7 +83,8 @@ local plugins = {
 
   {
     "ThePrimeagen/harpoon",
-    event = "BufEnter",
+    enabled = true,
+    keys = "<leader>a",
     config = function()
       require "custom.configs.harpoon"
     end,
