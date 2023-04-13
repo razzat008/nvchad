@@ -7,6 +7,18 @@ local g = vim.g
 opt.relativenumber = true
 opt.wrap = false
 opt.iskeyword:append("-", "_")
+opt.isfname:append "@-@"
+
+-- to leave 5 lines while j,k movement
+opt.scrolloff = 9
+
+opt.hlsearch = false
+opt.incsearch = true
+
+-- opt.backup = false
+-- opt.swapfile = false
+-- opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+-- opt.undofile = true
 
 -- vim.api.nvim_create_user_command('PeekOpen', require('peek').open, {})
 
@@ -22,7 +34,7 @@ g.luasnippets_path = { vim.fn.stdpath "config" .. "/lua/custom/snippets" }
 
 -- FOR NEOVIDE
 if vim.g.neovide then -- only run the following command if neovide exists
-  opt.guifont = "Hack Regular:h11","Iosevka:h11", "JetBrains Nerd Font:h11", "Monospace:h11"
+  opt.guifont = "Hack Regular:h11", "Iosevka:h11", "JetBrains Nerd Font:h11", "Monospace:h11"
 
   -- g.neovide_cursor_antialiasing = true
 

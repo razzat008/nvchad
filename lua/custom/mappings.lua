@@ -4,6 +4,8 @@ local M = {}
 
 M.general = {
   n = {
+    ["Q"] = { "<nop>", "worst place in the universe" },
+
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
 
     --close buffer
@@ -40,39 +42,39 @@ M.nvterm = {
 }
 
 --M.harpoon = {
---  n = {
---    ["<leader>a"] = {
---      mark.add_file,
---    },
+-- n = {
+--   ["<leader>a"] = {
+--     mark.add_file,
+--   },
 --
---    ["<c-e>"] = {
---      ui.toggle_quick_menu,
---    },
+--   ["<c-e>"] = {
+--     ui.toggle_quick_menu,
+--   },
 --
---    ["<c-s>"] = {
---      function()
---        ui.nav_file(1)
---      end,
---    },
+--   ["<c-s>"] = {
+--     function()
+--       ui.nav_file(1)
+--     end,
+--   },
 --
---    ["<c-d>"] = {
---      function()
---        ui.nav_file(2)
---      end,
---    },
+--   ["<c-d>"] = {
+--     function()
+--       ui.nav_file(2)
+--     end,
+--   },
 --
---    ["<c-f>"] = {
---      function()
---        ui.nav_file(3)
---      end,
---    },
+--   ["<c-f>"] = {
+--     function()
+--       ui.nav_file(3)
+--     end,
+--   },
 --
---    ["<c-g>"] = {
---      function()
---        ui.nav_file(4)
---      end,
---    },
---  },
+--   ["<c-g>"] = {
+--     function()
+--       ui.nav_file(4)
+--     end,
+--   },
+-- },
 --}
 
 -- -- more keybinds!
