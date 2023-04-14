@@ -34,19 +34,26 @@ g.luasnippets_path = { vim.fn.stdpath "config" .. "/lua/custom/snippets" }
 
 -- FOR NEOVIDE
 if vim.g.neovide then -- only run the following command if neovide exists
-  opt.guifont = "Hack Regular:h11", "Iosevka:h11", "JetBrains Nerd Font:h11", "Monospace:h11"
+  -- opt.guifont = "Hack Regular:h11", "Iosevka:h11", "JetBrains Nerd Font:h11", "Monospace:h11"
+  opt.guifont = "Hack Regular:h11"
 
   -- g.neovide_cursor_antialiasing = true
 
   -- g.neovide_cursor_animate_command_line = false
 
-  -- g.neovide_transparency = 0.5
+  g.neovide_transparency = 0.3
+  g.neovide_padding_bottom = 0
+  g.neovide_padding_top = 0
+  g.neovide_padding_right = 0
+  g.neovide_padding_left = 0
 
   g.neovide_confirm_quit = true
 
   g.neovide_fullscreen = false
 
   g.neovide_remember_window_size = true
+
+  g.neovide_scale_factor = 0.8
 
   -- g.neovide_refresh_rate = 60
 
