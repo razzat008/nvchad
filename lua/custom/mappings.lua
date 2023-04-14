@@ -33,7 +33,12 @@ M.nvterm = {
     -- run c code
     ["<leader>gc"] = {
       function()
-        require("nvterm.terminal").send("clear && g++ -o out " .. vim.fn.expand "%" .. " && ./out", "vertical")
+        local file_path = vim.fn.expand "%"
+        local filename = vim.fn.expand("%:t"):match "^([^.]+)" .. ".out"
+
+        local compile_cmd = string.format("clear && g++ -o %s %s && ./%s", filename, file_path, filename)
+
+        require("nvterm.terminal").send(compile_cmd, "vertical")
       end,
 
       "compile & run a cpp file",
