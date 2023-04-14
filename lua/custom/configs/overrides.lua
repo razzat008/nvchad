@@ -39,6 +39,7 @@ M.mason = {
 		"prettierd",
 		"cssmodules-language-server",
 		"bash-language-server",
+    "eslint_d",
 	},
 }
 
