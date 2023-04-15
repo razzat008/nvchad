@@ -68,7 +68,7 @@ local plugins = {
   {
     "ThePrimeagen/harpoon",
     enabled = true,
-    keys = {"<leader>a","<leader>o"},
+    keys = { "<leader>a", "<leader>o" },
     config = function()
       require "custom.configs.harpoon"
     end,
@@ -84,6 +84,13 @@ local plugins = {
       require "custom.configs.undotree"
     end,
   },
+
+  --md previewer
+  -- {
+  --   "jbyuki/md-prev.nvim",
+  --   enabled = true,
+  --   event = "BufEnter",
+  -- },
 }
 
 return plugins
