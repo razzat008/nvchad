@@ -41,7 +41,7 @@ if vim.g.neovide then -- only run the following command if neovide exists
 
   -- g.neovide_cursor_animate_command_line = false
 
-  g.neovide_transparency = 0.3
+  g.neovide_transparency = 0.8
   g.neovide_padding_bottom = 0
   g.neovide_padding_top = 0
   g.neovide_padding_right = 0
