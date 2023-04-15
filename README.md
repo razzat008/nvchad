@@ -5,3 +5,4 @@ Refer to its documentation for more info
 ```shell
 git clone -b v2 https://github.com/ceaser008/nvchad --depth  1 ~/.config/nvim  && nvim
 ``` 
+This will clone my config onto your machine.
