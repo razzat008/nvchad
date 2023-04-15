@@ -68,7 +68,7 @@ local plugins = {
   {
     "ThePrimeagen/harpoon",
     enabled = true,
-    keys = "<leader>a",
+    keys = {"<leader>a","<leader>o"},
     config = function()
       require "custom.configs.harpoon"
     end,
