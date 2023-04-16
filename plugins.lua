@@ -37,22 +37,6 @@ local plugins = {
     opts = overrides.nvimtree,
   },
 
-  -- Install a plugin
-  -- {
-  -- 	"max397574/better-escape.nvim",
-  -- 	event = "InsertEnter",
-  -- 	config = function()
-  -- 		require("better_escape").setup()
-  -- 	end,
-  -- },
-
-  -- To make a plugin not be loaded
-  -- {
-  --   "NvChad/nvim-colorizer.lua",
-  --   enabled = false
-  -- },
-
-  -- Uncomment if you want to re-enable which-key
   {
     "folke/which-key.nvim",
     enabled = false,
@@ -84,11 +68,29 @@ local plugins = {
   {
     "ThePrimeagen/harpoon",
     enabled = true,
-    keys = "<leader>a",
+    keys = { "<leader>a", "<leader>o" },
     config = function()
       require "custom.configs.harpoon"
     end,
   },
+
+  -- undo tree
+  {
+    "mbbill/undotree",
+    enabled = false,
+    keys = "<leader>u",
+    event = "BufEnter",
+    config = function()
+      require "custom.configs.undotree"
+    end,
+  },
+
+  --md previewer
+  -- {
+  --   "jbyuki/md-prev.nvim",
+  --   enabled = true,
+  --   event = "BufEnter",
+  -- },
 }
 
 return plugins
