@@ -91,6 +91,13 @@ local plugins = {
   --   enabled = true,
   --   event = "BufEnter",
   -- },
+  {
+    'codota/tabnine-nvim',
+    build = "./dl_binaries.sh",
+    config = function ()
+      require("custom.configs.tabnine")
+    end,
+  },
 }
 
 return plugins
