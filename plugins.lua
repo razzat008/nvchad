@@ -93,6 +93,7 @@ local plugins = {
   -- },
   {
     'codota/tabnine-nvim',
+    enabled = true,
     build = "./dl_binaries.sh",
     config = function ()
       require("custom.configs.tabnine")
