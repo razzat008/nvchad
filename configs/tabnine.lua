@@ -6,7 +6,7 @@ end
 
 local option = {
   disable_auto_comment = false,
-  accept_keymap = "<Tab>",
+  accept_keymap = "<c-m>",
   dismiss_keymap = "<C-]>",
   debounce_ms = 800,
   suggestion_color = { gui = "#808080", cterm = 244 },

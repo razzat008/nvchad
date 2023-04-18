@@ -18,6 +18,6 @@ lspconfig.clangd.setup {
   filetypes = { "c", "cpp" },
 }
 
-lspconfig.tsserver.setup {
-  filetypes = { "js", "ts" },
-}
+-- lspconfig.tsserver.setup {
+--   filetypes = { "js", "ts" },
+-- }

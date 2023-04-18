@@ -5,7 +5,7 @@ if not present then
 end
 
 local options = {
-  syntax = false,
+  syntax = true,
   filetype = { "markdown" },
   throttle_time = "auto",
   close_on_bdelete = true,

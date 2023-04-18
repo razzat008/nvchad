@@ -25,10 +25,8 @@ M.nvterm = {
       function()
         local file_path = vim.fn.expand "%"
         local filename = vim.fn.expand("%:t"):match "^([^.]+)" .. ".out"
-        -- local filename = vim.fn.expand "%:t"
 
         local compile_cmd = string.format("clear && g++ -o %s %s && ./%s", filename, file_path, filename)
-        -- local compile_cmd = string.format("clear && make %s && ./%s", filename, filename)
 
         require("nvterm.terminal").send(compile_cmd, "vertical")
       end,

@@ -45,6 +45,7 @@ local plugins = {
   --markdown
   {
     "toppair/peek.nvim",
+    enabled = true,
     ft = { "markdown" },
     build = "deno task --quiet build:fast",
     config = function()
@@ -92,11 +93,12 @@ local plugins = {
   --   event = "BufEnter",
   -- },
   {
-    'codota/tabnine-nvim',
+    "codota/tabnine-nvim",
+    event = "BufEnter",
     enabled = true,
     build = "./dl_binaries.sh",
-    config = function ()
-      require("custom.configs.tabnine")
+    config = function()
+      require "custom.configs.tabnine"
     end,
   },
 }
