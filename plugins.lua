@@ -56,13 +56,24 @@ local plugins = {
   -- easy navigation
   {
     "ggandor/lightspeed.nvim",
-    enabled = true,
+    enabled = false,
     -- event = "VeryLazy",
     keys = "s",
     config = function()
       require "custom.configs.lightspeed"
     end,
   },
+
+  {
+    "phaazon/hop.nvim",
+    event = "VeryLazy",
+    keys = "f",
+    enabled = true,
+    config = function()
+      require("custom.configs.hop")
+    end
+  },
+
 
   -- harpoon
 
@@ -95,7 +106,7 @@ local plugins = {
   {
     "codota/tabnine-nvim",
     event = "BufEnter",
-    enabled = true,
+    enabled = false,
     build = "./dl_binaries.sh",
     config = function()
       require "custom.configs.tabnine"
