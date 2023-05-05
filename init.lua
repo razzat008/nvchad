@@ -4,13 +4,17 @@ local opt = vim.opt
 local g = vim.g
 
 -- for numbers
-opt.relativenumber = true
+opt.nu = true
+opt.rnu = true
 opt.wrap = false
 opt.iskeyword:append("-", "_")
 opt.isfname:append "@-@"
 
+-- enable nvim-startup screen
+-- opt.shortmess = "filnxtToOF"
+
 -- to leave 5 lines while j,k movement
-opt.scrolloff = 9
+opt.scrolloff = 5
 
 opt.hlsearch = false
 opt.incsearch = true
@@ -19,8 +23,6 @@ opt.incsearch = true
 -- opt.swapfile = false
 -- opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 -- opt.undofile = true
-
--- vim.api.nvim_create_user_command('PeekOpen', require('peek').open, {})
 
 vim.cmd "silent! command! PeekOpen lua require('peek').open()"
 vim.cmd "silent! command! PeekClose lua require('peek').close()"
