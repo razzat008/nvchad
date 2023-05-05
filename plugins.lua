@@ -67,7 +67,7 @@ local plugins = {
   {
     "phaazon/hop.nvim",
     event = "VeryLazy",
-    keys = "f",
+    keys = "s",
     enabled = true,
     config = function()
       require("custom.configs.hop")
