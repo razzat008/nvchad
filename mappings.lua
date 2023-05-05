@@ -9,7 +9,6 @@ M.general = {
 
     --close buffer
     -- ["<leader>x"] = { ":bufdo close<cr>", "close buffer" },
-    -- basic stuffs from theprimegen
     ["<C-u>"] = { "<C-u>zz", "move half page up" },
     ["<C-d>"] = { "<C-d>zz", "move half page down" },
 
@@ -17,6 +16,23 @@ M.general = {
     ["<leader>sv"] = { "<C-w>v", "split vertically" },
   },
 }
+
+--M.hop = {
+--  n = {
+--    ["s"] = {
+--      function()
+--        hop.hint_char1 { direction = directions.AFTER_CURSOR, current_line_only = false }
+--      end,
+--    },
+--    {
+--      ["S"] = {
+--        function()
+--          hop.hint_char1 { direction = directions.BEFORE_CURSOR, current_line_only = false }
+--        end,
+--      },
+--    },
+--  },
+--}
 
 M.nvterm = {
   n = {
