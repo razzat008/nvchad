@@ -20,6 +20,7 @@ local sources = {
 
   -- webdev stuff
   b.formatting.deno_fmt,
+  b.formatting.rustfmt,
   b.formatting.usort,
   b.formatting.prettierd.with { filetypes = { "html", "js", "css", "markdown" } },
   -- b.formatting.prettier,
