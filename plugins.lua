@@ -70,10 +70,9 @@ local plugins = {
     keys = "s",
     enabled = true,
     config = function()
-      require("custom.configs.hop")
-    end
+      require "custom.configs.hop"
+    end,
   },
-
 
   -- harpoon
 
@@ -97,12 +96,6 @@ local plugins = {
     end,
   },
 
-  --md previewer
-  -- {
-  --   "jbyuki/md-prev.nvim",
-  --   enabled = true,
-  --   event = "BufEnter",
-  -- },
   {
     "codota/tabnine-nvim",
     event = "BufEnter",
