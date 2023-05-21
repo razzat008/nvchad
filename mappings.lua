@@ -17,23 +17,6 @@ M.general = {
   },
 }
 
---M.hop = {
---  n = {
---    ["s"] = {
---      function()
---        hop.hint_char1 { direction = directions.AFTER_CURSOR, current_line_only = false }
---      end,
---    },
---    {
---      ["S"] = {
---        function()
---          hop.hint_char1 { direction = directions.BEFORE_CURSOR, current_line_only = false }
---        end,
---      },
---    },
---  },
---}
-
 M.nvterm = {
   n = {
     -- run c code

@@ -15,7 +15,7 @@ opt.isfname:append "@-@"
 
 -- to leave 5 lines while j,k movement
 opt.scrolloff = 5
-opt.colorcolumn = "100"
+opt.colorcolumn = "80"
 
 opt.hlsearch = false
 opt.incsearch = true
