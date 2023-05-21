@@ -5,9 +5,9 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "rosepine",
-  theme_toggle = { "rosepine", "falcon" },
-  transparency = true,
+  theme = "gruvbox",
+  theme_toggle = { "gruvbox", "falcon" },
+  transparency = false,
 
   hl_override = highlights.override,
   hl_add = highlights.add,
@@ -15,7 +15,7 @@ M.ui = {
   --statusline
   statusline = {
     theme = "minimal", -- default/vscode/vscode_colored/minimal
-    separator_style = "block", -- round/default/block
+    separator_style = "round", -- round/default/block
   },
 
   cmp = {

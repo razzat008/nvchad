@@ -53,17 +53,6 @@ local plugins = {
     end,
   },
 
-  -- easy navigation
-  {
-    "ggandor/lightspeed.nvim",
-    enabled = false,
-    -- event = "VeryLazy",
-    keys = "s",
-    config = function()
-      require "custom.configs.lightspeed"
-    end,
-  },
-
   {
     "phaazon/hop.nvim",
     event = "VeryLazy",
@@ -96,14 +85,16 @@ local plugins = {
     end,
   },
 
+  -- LaTex plugin
   {
-    "codota/tabnine-nvim",
+    "lervag/vimtex",
     event = "BufEnter",
-    enabled = false,
-    build = "./dl_binaries.sh",
-    config = function()
-      require "custom.configs.tabnine"
-    end,
+    enabled = true,
+    filetype = {"tex"},
+    config = function ()
+      require "custom.configs.latex"
+    end
+
   },
 }
 
