@@ -46,7 +46,6 @@ local plugins = {
   {
     "toppair/peek.nvim",
     enabled = true,
-    ft = { "markdown" },
     build = "deno task --quiet build:fast",
     config = function()
       require "custom.configs.peek"
@@ -85,16 +84,21 @@ local plugins = {
     end,
   },
 
-  -- LaTex plugin
   {
-    "lervag/vimtex",
+    "vimwiki/vimwiki",
+    keys = "<leader>ww",
     event = "BufEnter",
-    enabled = true,
-    filetype = {"tex"},
-    config = function ()
-      require "custom.configs.latex"
-    end
+    config = function()
+      require "custom.configs.vimwiki"
+    end,
+  },
 
+  {
+    "simrat/rust-tools.nvim",
+    enabled = true,
+    config=function ()
+      require "custom.configs.rust_tools",
+    end,
   },
 }
 

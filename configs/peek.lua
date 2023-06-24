@@ -6,7 +6,6 @@ end
 
 local options = {
   syntax = true,
-  filetype = { "markdown" },
   throttle_time = "auto",
   close_on_bdelete = true,
   theme = "dark",

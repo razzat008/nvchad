@@ -1,1 +1,0 @@
--- this is to override default themes in nvim
