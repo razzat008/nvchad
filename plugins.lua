@@ -86,20 +86,22 @@ local plugins = {
 
   {
     "vimwiki/vimwiki",
+    event = "VeryLazy",
+    enabled = true,
     keys = "<leader>ww",
-    event = "BufEnter",
+    ft = "wiki",
     config = function()
       require "custom.configs.vimwiki"
     end,
   },
 
-  {
-    "simrat/rust-tools.nvim",
-    enabled = true,
-    config=function ()
-      require "custom.configs.rust_tools",
-    end,
-  },
+  -- {
+  --   "simrat/rust-tools.nvim",
+  --   enabled = true,
+  --   config=function ()
+  --     require "custom.configs.rust_tools"
+  --   end,
+  -- },
 }
 
 return plugins
