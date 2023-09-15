@@ -19,6 +19,18 @@ M.general = {
 
 M.nvterm = {
   n = {
+    -- compile and run cargo project
+    ["<leader>cc"] = {
+      --
+      function()
+        local cargo_compile = string.format "cargo run"
+
+        require("nvterm.terminal").send(cargo_compile, "vertical")
+      end,
+
+      "use cargo to build and run a cargo project",
+    },
+
     -- run c code
     ["<leader>gc"] = {
       function()
