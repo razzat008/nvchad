@@ -94,7 +94,6 @@ local plugins = {
       require "custom.configs.vimwiki"
     end,
   },
-
   -- {
   --   "simrat/rust-tools.nvim",
   --   enabled = true,
