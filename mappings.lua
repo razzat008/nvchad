@@ -19,6 +19,7 @@ M.general = {
 
 M.nvterm = {
   n = {
+
     -- compile and run cargo project
     ["<leader>cc"] = {
       --
@@ -29,6 +30,18 @@ M.nvterm = {
       end,
 
       "use cargo to build and run a cargo project",
+    },
+
+    ["<leader>cl"] = {
+      --
+      function()
+        local file_path = vim.fn.expand "%"
+        local latex_run = string.format("pdflatex %s", file_path)
+
+        require("nvterm.terminal").send(latex_run, "vertical")
+      end,
+
+      "use latex_run to build and display the generated pdf file",
     },
 
     -- run c code
