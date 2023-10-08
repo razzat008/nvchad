@@ -2,7 +2,21 @@ local M = {}
 
 M.general = {
   n = {
+
+    ["<leader><leader>"] = {
+      function()
+        vim.cmd "so"
+      end,
+      "source nvim config",
+    },
     ["Q"] = { "<nop>", "worst place in the universe" },
+
+    ["n"] = { "nzzzv", "center when moving to next / result" },
+    ["N"] = { "Nzzzv", "center when moving to previous / result" },
+
+    ["<leader>y"] = { [["+y]], "copy into system-clipboard" },
+    ["<leader>Y"] = { '[["+Y]]', "paste into system-clipboard" },
+    ["<leader>d"] = { '[["_d]]', "greatest remaps" },
 
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["<leader>cx"] = { "<cmd>!chmod +x %<cr>", "make current bash file executable", opts = { silent = true } },
@@ -14,6 +28,13 @@ M.general = {
 
     --split window
     ["<leader>sv"] = { "<C-w>v", "split vertically" },
+  },
+  v = {
+    ["<leader>y"] = { '[["+y]]', "greatest remaps" },
+    ["<leader>d"] = { '[["_d]]', "greatest remaps" },
+  },
+  x = {
+    ["<leader>p"] = { '[["_dP]]', "greatest remap ever" },
   },
 }
 
