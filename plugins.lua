@@ -45,7 +45,7 @@ local plugins = {
   --markdown
   {
     "toppair/peek.nvim",
-    enabled = true,
+    enabled = false,
     build = "deno task --quiet build:fast",
     config = function()
       require "custom.configs.peek"
@@ -76,7 +76,7 @@ local plugins = {
   -- undo tree
   {
     "mbbill/undotree",
-    enabled = false,
+    enabled = true,
     keys = "<leader>u",
     event = "BufEnter",
     config = function()
@@ -94,13 +94,6 @@ local plugins = {
       require "custom.configs.vimwiki"
     end,
   },
-  -- {
-  --   "simrat/rust-tools.nvim",
-  --   enabled = true,
-  --   config=function ()
-  --     require "custom.configs.rust_tools"
-  --   end,
-  -- },
 }
 
 return plugins
