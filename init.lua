@@ -26,17 +26,19 @@ opt.incsearch = true
 -- opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 -- opt.undofile = true
 
-vim.cmd "silent! command! PeekOpen lua require('peek').open()"
-vim.cmd "silent! command! PeekClose lua require('peek').close()"
+-- vim.cmd "silent! command! PeekOpen lua require('peek').open()"
+-- vim.cmd "silent! command! PeekClose lua require('peek').close()"
+
 -- Auto resize panes when resizing nvim window
 autocmd("VimResized", {
   pattern = "*",
   command = "tabdo wincmd =",
 })
 
+-- for custom snippets
 g.luasnippets_path = { vim.fn.stdpath "config" .. "/lua/custom/snippets" }
 
--- FOR NEOVIDE
+-- FOR NEOVIDE(gui)
 if vim.g.neovide then -- only run the following command if neovide exists
   -- opt.guifont = "Hack Regular:h11", "Iosevka:h11", "JetBrains Nerd Font:h11", "Monospace:h11"
   opt.guifont = "Hack Regular:h11"
@@ -59,7 +61,7 @@ if vim.g.neovide then -- only run the following command if neovide exists
 
   g.neovide_scale_factor = 0.8
 
-  -- g.neovide_refresh_rate = 60
+  g.neovide_refresh_rate = 60
 
   -- g.neovide_cursor_animation_length = 0.1
 
