@@ -6,10 +6,9 @@ end
 
 local options = {
   vimwiki_hl_cb_checked = 2,
-  vimwiki_filetypes = {"wiki"},
-  vimwiki_global_ext = 0,
-  -- g.vimwiki_list = {{path = '~/.vimwiki/'}},
-  -- vimwiki_list = {'path':'~/.vimwiki'},
+  vimwiki_filetypes = {},
+  -- vimwiki_global_ext = 0,
+  -- vimwiki_list =  '~/.vimwiki/',
 }
 
 vimwiki.setup(options)
