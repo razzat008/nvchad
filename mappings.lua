@@ -65,6 +65,18 @@ M.nvterm = {
       "use latex_run to build and display the generated pdf file",
     },
 
+    ["<leader>bl"] = {
+      --
+      function()
+        local file_path = vim.fn.expand "%"
+        local python_run = string.format("python3 %s", file_path)
+
+        require("nvterm.terminal").send(python_run, "vertical")
+      end,
+
+      "use python3 to run a .py file",
+    },
+
     -- run c code
     ["<leader>gc"] = {
       function()
@@ -112,6 +124,13 @@ M.blankline = {
 
       "Jump to current_context",
     },
+  },
+}
+
+M.md_preview = {
+  plugin = true,
+  n = {
+    ["<leader>mp"] = { "<cmd>MarkdownPreviewToggle<CR>", "Toggle Markdown Preview" },
   },
 }
 
