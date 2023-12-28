@@ -3,7 +3,7 @@ local autocmd = vim.api.nvim_create_autocmd
 local opt = vim.opt
 local g = vim.g
 
--- g.vimwiki = {{path: "/home/ceaser/.vmwiki/"}}
+-- g.vimwiki = {{("path"): "/home/ceaser/.vimwiki/"}}
 -- for numbers
 opt.nu = true
 opt.rnu = true
@@ -39,7 +39,7 @@ autocmd("VimResized", {
 g.luasnippets_path = { vim.fn.stdpath "config" .. "/lua/custom/snippets" }
 
 -- FOR NEOVIDE(gui)
-if vim.g.neovide then -- only run the following command if neovide exists
+if g.neovide then -- only run the following command if neovide exists
   -- opt.guifont = "Hack Regular:h11", "Iosevka:h11", "JetBrains Nerd Font:h11", "Monospace:h11"
   opt.guifont = "Hack Regular:h11"
 
