@@ -103,6 +103,12 @@ local plugins = {
       require("core.utils").load_mappings "md_preview"
     end,
   },
+
+  {
+    "github/copilot.vim",
+    enabled = false,
+    event = "BufEnter",
+  },
 }
 
 return plugins
