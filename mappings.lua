@@ -71,7 +71,7 @@ M.nvterm = {
         local file_path = vim.fn.expand "%"
         local python_run = string.format("python3 %s", file_path)
 
-        require("nvterm.terminal").send(python_run, "vertical")
+        require("nvterm.terminal").send(python_run, "horizontal")
       end,
 
       "use python3 to run a .py file",
