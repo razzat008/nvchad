@@ -88,7 +88,7 @@ M.nvterm = {
         require("nvterm.terminal").send(compile_cmd, "vertical")
       end,
 
-      "compile & run a cpp file",
+      "use gcc to compile & run a c file",
     },
   },
 }
