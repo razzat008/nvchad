@@ -3,11 +3,14 @@ local autocmd = vim.api.nvim_create_autocmd
 local opt = vim.opt
 local g = vim.g
 
+g.vimwiki_list = {{path = '~/.vimwiki/', syntax = 'markdown', ext = '.wiki'}}
+
 -- g.vimwiki = {{("path"): "/home/ceaser/.vimwiki/"}}
 -- for numbers
 opt.nu = true
 opt.rnu = true
 opt.wrap = false
+opt.clipboard = unnamedplus
 opt.iskeyword:append("-", "_")
 opt.isfname:append "@-@"
 
@@ -41,7 +44,7 @@ g.luasnippets_path = { vim.fn.stdpath "config" .. "/lua/custom/snippets" }
 -- FOR NEOVIDE(gui)
 if g.neovide then -- only run the following command if neovide exists
   -- opt.guifont = "Hack Regular:h11", "Iosevka:h11", "JetBrains Nerd Font:h11", "Monospace:h11"
-  opt.guifont = "Hack Regular:h11"
+  opt.guifont = "Hack Nerd Font:h11"
 
   -- g.neovide_cursor_antialiasing = true
 
