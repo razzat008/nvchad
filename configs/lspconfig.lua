@@ -6,7 +6,7 @@ local lspconfig = require "lspconfig"
 -- if you just want default config for the servers then put them in a table
 
 local servers =
-  { "rust_analyzer", "html", "cssls", "pylsp", "tsserver", "lua_ls", "clangd", "bashls", "phpactor", "texlab","jdtls" }
+{ "rust_analyzer", "html", "cssls", "pylsp", "tsserver", "lua_ls", "clangd", "bashls", "phpactor", "texlab", "jdtls" }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
@@ -21,4 +21,8 @@ lspconfig.clangd.setup {
 
 lspconfig.texlab.setup {
   filetypes = { "tex" },
+}
+
+lspconfig.tsserver.setup {
+  filetypes = { "js", "ts" },
 }
