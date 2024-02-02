@@ -42,16 +42,6 @@ local plugins = {
     enabled = false,
   },
 
-  --markdown
-  {
-    "toppair/peek.nvim",
-    enabled = false,
-    build = "deno task --quiet build:fast",
-    config = function()
-      require "custom.configs.peek"
-    end,
-  },
-
   {
     "phaazon/hop.nvim",
     event = "VeryLazy",
@@ -102,12 +92,6 @@ local plugins = {
       vim.g.mkdp_filetypes = { "markdown" }
       require("core.utils").load_mappings "md_preview"
     end,
-  },
-
-  {
-    "github/copilot.vim",
-    enabled = false,
-    event = "BufEnter",
   },
 }
 
