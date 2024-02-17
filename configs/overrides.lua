@@ -2,7 +2,6 @@ local M = {}
 
 M.treesitter = {
   ensure_installed = {
-    "vim",
     "bash",
     "lua",
     "html",
@@ -12,7 +11,6 @@ M.treesitter = {
     "python",
     "rust",
     "markdown",
-    "markdown_inline",
   },
   indent = {
     enable = true,
@@ -32,6 +30,7 @@ M.mason = {
     "stylua",
     "usort",
     "prettierd",
+    "tsserver",
     -- "cssmodules-language-server",
     -- "bash-language-server",
     "eslint_d",
