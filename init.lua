@@ -10,7 +10,7 @@ g.vimwiki_list = {{path = '~/.vimwiki/', syntax = 'markdown', ext = '.wiki'}}
 opt.nu = true
 opt.rnu = true
 opt.wrap = false
-opt.clipboard = unnamedplus
+opt.clipboard = "unnamedplus"
 opt.iskeyword:append("-", "_")
 opt.isfname:append "@-@"
 
@@ -28,9 +28,6 @@ opt.incsearch = true
 -- opt.swapfile = false
 -- opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 -- opt.undofile = true
-
--- vim.cmd "silent! command! PeekOpen lua require('peek').open()"
--- vim.cmd "silent! command! PeekClose lua require('peek').close()"
 
 -- Auto resize panes when resizing nvim window
 autocmd("VimResized", {
@@ -50,7 +47,7 @@ if g.neovide then -- only run the following command if neovide exists
 
   -- g.neovide_cursor_animate_command_line = false
 
-  g.neovide_transparency = 0.8
+  g.neovide_transparency = 0.9
   g.neovide_padding_bottom = 0
   g.neovide_padding_top = 0
   g.neovide_padding_right = 0
@@ -72,5 +69,5 @@ if g.neovide then -- only run the following command if neovide exists
 
   -- g.neovide_cursor_vfx_opacity = 200.0
 
-  g.neovide_cursor_vfx_mode = "torpedo"
+  -- g.neovide_cursor_vfx_mode = "torpedo"
 end
