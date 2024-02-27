@@ -14,26 +14,26 @@ M.treesitter = {
   },
   indent = {
     enable = true,
-    disable = {},
+    -- disable = {},
   },
 }
 
 M.mason = {
   ensure_installed = {
     "lua-language-server",
-    -- "html-lsp",
-    -- "css-lsp",
+    "eslint_d",
     "clangd",
-    "clang-format",
     "rust-analyzer",
-    "deno",
     "stylua",
     "usort",
     "prettierd",
     "tsserver",
+    -- "html-lsp",
+    -- "css-lsp",
+    -- "clang-format",
+    -- "deno",
     -- "cssmodules-language-server",
     -- "bash-language-server",
-    "eslint_d",
   },
 }
 

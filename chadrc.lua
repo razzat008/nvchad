@@ -5,16 +5,16 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "gruvbox",
-  theme_toggle = { "gruvbox", "gruvbox" },
-  transparency = true,
+  theme = "gatekeeper",
+  theme_toggle = { "gatekeeper", "gatekeeper" },
+  transparency = false,
 
   hl_override = highlights.override,
   hl_add = highlights.add,
 
   --statusline
   statusline = {
-    theme = "minimal", -- default/vscode/vscode_colored/minimal
+    theme = "minimal",         -- default/vscode/vscode_colored/minimal
     separator_style = "block", -- round/default/block
   },
 

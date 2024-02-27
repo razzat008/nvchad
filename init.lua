@@ -5,7 +5,6 @@ local g = vim.g
 
 g.vimwiki_list = {{path = '~/.vimwiki/', syntax = 'markdown', ext = '.wiki'}}
 
--- g.vimwiki = {{("path"): "/home/ceaser/.vimwiki/"}}
 -- for numbers
 opt.nu = true
 opt.rnu = true
@@ -41,9 +40,9 @@ g.luasnippets_path = { vim.fn.stdpath "config" .. "/lua/custom/snippets" }
 -- FOR NEOVIDE(gui)
 if g.neovide then -- only run the following command if neovide exists
   -- opt.guifont = "Hack Regular:h11", "Iosevka:h11", "JetBrains Nerd Font:h11", "Monospace:h11"
-  opt.guifont = "Hack Nerd Font:h11"
+  opt.guifont = "Hack Nerd Font:h13"
 
-  -- g.neovide_cursor_antialiasing = true
+  g.neovide_cursor_antialiasing = true
 
   -- g.neovide_cursor_animate_command_line = false
 
@@ -63,11 +62,11 @@ if g.neovide then -- only run the following command if neovide exists
 
   g.neovide_refresh_rate = 60
 
-  -- g.neovide_cursor_animation_length = 0.1
+  g.neovide_cursor_animation_length = 0.1
 
-  -- g.neovide_cursor_trail_size = 0.1
+  g.neovide_cursor_trail_size = 0.1
 
-  -- g.neovide_cursor_vfx_opacity = 200.0
+  g.neovide_cursor_vfx_opacity = 200.0
 
   -- g.neovide_cursor_vfx_mode = "torpedo"
 end
