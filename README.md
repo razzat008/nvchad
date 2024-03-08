@@ -22,5 +22,5 @@ mv ~/.config/nvim/lua/custom/ ~/.config/nvim/lua/custom.bak
 and run the command:
 
 ```bash
-git clone -b custom https://github.com/razzat008/nvchad ~/.config/nvim/lua/custom/ 
+git clone -b master https://github.com/razzat008/nvchad ~/.config/nvim/lua/custom/ 
 ```
