@@ -3,7 +3,9 @@ local autocmd = vim.api.nvim_create_autocmd
 local opt = vim.opt
 local g = vim.g
 
-g.vimwiki_list = {{path = '~/.vimwiki/', syntax = 'markdown', ext = '.wiki'}}
+g.vimwiki_list = {{path = '~/.vimwiki/', ext = '.wiki'}}
+vimwiki_ext2syntax = {}
+-- , syntax = 'markdown' -- for above 
 
 -- for numbers
 opt.nu = true
