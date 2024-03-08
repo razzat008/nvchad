@@ -32,6 +32,7 @@ M.general = {
   v = {
     ["<leader>y"] = { '[["+y]]', "greatest remaps" },
     ["<leader>d"] = { '[["_d]]', "greatest remaps" },
+    [";"] = { ":", "enter command mode", opts = { nowait = true } },
   },
   x = {
     ["<leader>p"] = { '[["_dP]]', "greatest remap ever" },
