@@ -1,4 +1,10 @@
-## A custom config for [NVCHAD](https://github.com/NvChad/NvChad.git)
+## A custom config for [NVCHAD](https://github.com/NvChad/NvChad.git) v2.0
+
+As this config is for the v2.0 version NvChad; clone the v2.0 branch
+```bash
+git clone -b v2.0 https://github.com/NvChad/NvChad ~/.config/nvim && nvim
+```
+
 ### What plugins does it provide out of the box?
 
 - harpoon
