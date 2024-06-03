@@ -2,13 +2,12 @@ local M = {}
 
 M.general = {
   n = {
-
-    ["<leader><leader>"] = {
-      function()
-        vim.cmd "so"
-      end,
-      "source nvim config",
-    },
+    -- ["<leader><leader>"] = {
+    --   function()
+    --     vim.cmd "so"
+    --   end,
+    --   "source nvim config",
+    -- },
     ["Q"] = { "<nop>", "worst place in the universe" },
 
     ["n"] = { "nzzzv", "center when moving to next / result" },
@@ -46,9 +45,21 @@ M.nvterm = {
     ["<leader>cc"] = {
       --
       function()
-        local cargo_compile = string.format "cargo run"
+        local cargo_run = string.format "cargo run"
 
-        require("nvterm.terminal").send(cargo_compile, "vertical")
+        require("nvterm.terminal").send(cargo_run, "vertical")
+      end,
+
+      "use cargo to build and run a cargo project",
+    },
+
+    ["<leader>cr"] = {
+      --
+      function()
+        local file_path = vim.fn.expand "%"
+        local rustc_compile = string.format("rustc %s", file_path)
+
+        require("nvterm.terminal").send(rustc_compile, "vertical")
       end,
 
       "use cargo to build and run a cargo project",
@@ -132,6 +143,17 @@ M.md_preview = {
   plugin = true,
   n = {
     ["<leader>mp"] = { "<cmd>MarkdownPreviewToggle<CR>", "Toggle Markdown Preview" },
+  },
+}
+
+M.telescope = {
+  plugin = true,
+  n = {
+
+    ["<leader><space>"] = {
+      "<cmd>Telescope buffers<CR>",
+      "view buffers",
+    },
   },
 }
 

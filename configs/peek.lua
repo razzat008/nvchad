@@ -5,13 +5,16 @@ if not present then
 end
 
 local options = {
+  auto_load =  true,
+  filetype = {"markdown","vimwiki"},
   syntax = true,
   throttle_time = "auto",
   close_on_bdelete = true,
-  -- theme = "dark",
-  auto_load = true,
-  -- app = { "firefox", "--new-window" },
+  theme = "dark",
+  -- app = { "chromium", "--new-window" },
   app = "webview",
 }
 
 mpreview.setup(options)
+vim.api.nvim_create_user_command('PeekOpen', require('peek').open, {})
+vim.api.nvim_create_user_command('PeekClose', require('peek').close, {})

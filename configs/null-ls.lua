@@ -10,9 +10,9 @@ local sources = {
 
   -- webdev stuff
   b.formatting.deno_fmt,
-  b.formatting.rustfmt,
+  b.formatting.rustfmt.with { filetypes = { "rs" } },
   b.formatting.usort,
-  b.formatting.prettierd.with { filetypes = { "html", "js", "css", "markdown" } },
+  b.formatting.prettierd.with { filetypes = { "html", "js", "css", "yml", "yaml" } },
   b.formatting.clang_format,
 
   -- Lua
@@ -24,11 +24,15 @@ local sources = {
   -- b.diagnostics.phpmd,
   -- b.diagnostics.cpplint,
   -- b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
-  b.diagnostics.eslint_d.with { -- js/ts linter
+  b.diagnostics.eslint_d.with {                 -- js/ts linter
     condition = function(utils)
       return utils.root_has_file ".eslintrc.js" -- change file extension if you use something else
     end,
   },
+}
+
+b.diagnostics.actionlint.with{
+
 }
 
 null_ls.setup {

@@ -5,8 +5,21 @@ local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
 
-local servers =
-{ "rust_analyzer", "html", "cssls", "pylsp", "tsserver", "lua_ls", "clangd", "bashls", "phpactor", "texlab", "jdtls" }
+local servers = {
+  "rust_analyzer",
+  "html",
+  "cssls",
+  "pylsp",
+  "tsserver",
+  "lua_ls",
+  "clangd",
+  "bashls",
+  "phpactor",
+  "texlab",
+  "jdtls",
+  "yamlls",
+  "tailwindcss",
+}
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
@@ -14,9 +27,16 @@ for _, lsp in ipairs(servers) do
   }
 end
 
---
 lspconfig.clangd.setup {
-  filetypes = { "c", "cpp", "header" },
+  filetypes = { "c", "cpp" },
+  single_file_support = false,
+  root_dir = function()
+    return vim.loop.cwd()
+  end,
+  cmd = {
+    "clangd",
+    -- "--offset-encoding=utf-16",
+  },
 }
 
 lspconfig.texlab.setup {
@@ -25,4 +45,12 @@ lspconfig.texlab.setup {
 
 lspconfig.tsserver.setup {
   filetypes = { "js", "ts" },
+}
+
+lspconfig.yamlls.setup {
+  filetypes = { "yml", "yaml" },
+}
+
+lspconfig.tailwindcss.setup {
+  filetypes = { "js", "ts", "jsx", "tsx" },
 }

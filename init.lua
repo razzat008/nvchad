@@ -3,9 +3,9 @@ local autocmd = vim.api.nvim_create_autocmd
 local opt = vim.opt
 local g = vim.g
 
-g.vimwiki_list = {{path = '~/.vimwiki/', ext = '.wiki'}}
+g.vimwiki_list = { { path = "~/.vimwiki/", ext = ".wiki" }, { path = "~/.personal/", ext = ".wiki" } }
 vimwiki_ext2syntax = {}
--- , syntax = 'markdown' -- for above 
+-- , syntax = 'markdown' -- for above
 
 -- for numbers
 opt.nu = true
@@ -29,6 +29,9 @@ opt.incsearch = true
 -- opt.swapfile = false
 -- opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 -- opt.undofile = true
+
+-- vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+-- vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
 
 -- Auto resize panes when resizing nvim window
 autocmd("VimResized", {

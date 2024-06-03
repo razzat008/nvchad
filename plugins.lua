@@ -84,13 +84,29 @@ local plugins = {
       require "custom.configs.vimwiki"
     end,
   },
+
+  -- {
+  --   "iamcco/markdown-preview.nvim",
+  --   cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+  --   build = "cd app && yarn install",
+  --   init = function()
+  --     vim.g.mkdp_filetypes = { "markdown" }
+  --   end,
+  --   ft = { "markdown" },
+  -- },
   {
-    "iamcco/markdown-preview.nvim",
-    ft = "markdown",
-    build = "cd app && yarn install",
+    "lervag/vimtex",
+    init = function()
+      vim.g.vimtex_view_method = "zathura"
+    end,
+  },
+  {
+    "toppair/peek.nvim",
+    event = { "VeryLazy" },
+    ft = "md",
+    build = "deno task --quiet build:fast",
     config = function()
-      vim.g.mkdp_filetypes = { "markdown" }
-      require("core.utils").load_mappings "md_preview"
+      require "custom.configs.peek"
     end,
   },
 }
