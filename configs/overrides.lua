@@ -37,8 +37,8 @@ M.mason = {
     "tsserver",
     "html-lsp",
     -- "css-lsp",
-    -- "clang-format",
-    -- "deno",
+    "clang-format",
+    "deno",
     -- "cssmodules-language-server",
     -- "bash-language-server",
   },
@@ -47,7 +47,7 @@ M.mason = {
 -- git support in nvimtree
 M.nvimtree = {
   disable_netrw = false,
-  hijack_netrw = false,
+  hijack_netrw = true,
   git = {
     enable = false,
   },

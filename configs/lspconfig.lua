@@ -19,6 +19,7 @@ local servers = {
   "jdtls",
   "yamlls",
   "tailwindcss",
+  "asm_lsp",
 }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -37,6 +38,9 @@ lspconfig.clangd.setup {
     "clangd",
     -- "--offset-encoding=utf-16",
   },
+}
+lspconfig.asm_lsp.setup {
+  filetypes = { "asm" },
 }
 
 lspconfig.texlab.setup {
