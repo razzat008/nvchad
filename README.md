@@ -7,15 +7,15 @@ git clone -b v2.0 https://github.com/NvChad/NvChad ~/.config/nvim && nvim
 
 ### What plugins does it provide out of the box?
 
-- harpoon
-- undotree
-- vimwiki
-- lightspeed
-- markdownviewer
+- harpoon : easliy navigate between files
+- undotree : git timeline
+- vimwiki : for notes 
+- lightspeed : move anywhere with few keystrokes
+- peek : a markdown viewer
 
 ### Prerequisites:
 - lua
-- nvchad
+- nvchad's base config (**v2.0**)
 - an internet connection
 
 ### How to install?
@@ -30,3 +30,9 @@ and run the command:
 ```bash
 git clone -b master https://github.com/razzat008/nvchad ~/.config/nvim/lua/custom/ 
 ```
+
+If you want to use multiple configs simultaneously:
+```bash
+alias nv='NVIM_APPNAME="another" nvim'
+```
+for above to run you **must** clone the config into ```~/.config/another```
