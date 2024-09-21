@@ -17,6 +17,7 @@ M.treesitter = {
     "typescript",
     "vim",
     "ssh_config",
+    "go",
   },
   indent = {
     enable = true,
@@ -34,7 +35,7 @@ M.mason = {
     "usort",
     "prettierd",
     "prettier",
-    "tsserver",
+    "ts_ls",
     "html-lsp",
     -- "css-lsp",
     "clang-format",

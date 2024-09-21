@@ -12,7 +12,7 @@ local sources = {
   b.formatting.deno_fmt,
   b.formatting.rustfmt.with { filetypes = { "rs" } },
   b.formatting.usort,
-  b.formatting.prettierd.with { filetypes = { "html", "js", "css", "yml", "yaml" } },
+  b.formatting.prettierd.with { filetypes = { "html", "js", "css", "yml", "yaml" , "md"} },
   b.formatting.clang_format,
 
   -- Lua

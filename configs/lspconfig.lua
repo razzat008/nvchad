@@ -10,12 +10,13 @@ local servers = {
   "html",
   "cssls",
   "pylsp",
-  "tsserver",
+  "ts_ls",
   "lua_ls",
   "clangd",
   "bashls",
   "phpactor",
   "texlab",
+  "gopls",
   "jdtls",
   "yamlls",
   "tailwindcss",
@@ -47,7 +48,7 @@ lspconfig.texlab.setup {
   filetypes = { "tex" },
 }
 
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
   filetypes = { "js", "ts" },
 }
 
@@ -57,4 +58,7 @@ lspconfig.yamlls.setup {
 
 lspconfig.tailwindcss.setup {
   filetypes = { "js", "ts", "jsx", "tsx" },
+}
+lspconfig.gopls.setup {
+  filetypes = { "go" },
 }
