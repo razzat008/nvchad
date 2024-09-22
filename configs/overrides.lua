@@ -40,6 +40,7 @@ M.mason = {
     -- "css-lsp",
     "clang-format",
     "deno",
+    "ts_ls",
     -- "cssmodules-language-server",
     -- "bash-language-server",
   },
