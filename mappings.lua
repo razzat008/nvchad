@@ -59,7 +59,8 @@ M.nvterm = {
       --
       function()
         local file_path = vim.fn.expand "%"
-        local rustc_compile = string.format("rustc %s", file_path)
+        local filename = vim.fn.expand("%:t"):match "^([^.]+)"
+        local rustc_compile = string.format("clear && rustc %s && ./%s", file_path, filename)
 
         require("nvterm.terminal").send(rustc_compile, "vertical")
       end,
@@ -67,17 +68,17 @@ M.nvterm = {
       "use cargo to build and run a cargo project",
     },
 
-    ["<leader>cl"] = {
-      --
-      function()
-        local file_path = vim.fn.expand "%"
-        local latex_run = string.format("pdflatex %s", file_path)
-
-        require("nvterm.terminal").send(latex_run, "vertical")
-      end,
-
-      "use latex_run to build and display the generated pdf file",
-    },
+    -- ["<leader>cl"] = {
+    --   --
+    --   function()
+    --     local file_path = vim.fn.expand "%"
+    --     local latex_run = string.format("pdflatex %s", file_path)
+    --
+    --     require("nvterm.terminal").send(latex_run, "vertical")
+    --   end,
+    --
+    --   "use latex_run to build and display the generated pdf file",
+    -- },
 
     ["<leader>bl"] = {
       --
@@ -144,7 +145,7 @@ M.blankline = {
 M.md_preview = {
   plugin = true,
   n = {
-    ["<leader>mp"] = { "<cmd>MarkdownPreviewToggle<CR>", "Toggle Markdown Preview" },
+    ["<leader>mp"] = { "<cmd>PeekOpen<CR>", "Toggle Markdown Preview" },
   },
 }
 
