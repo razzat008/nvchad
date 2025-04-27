@@ -40,6 +40,16 @@ lspconfig.clangd.setup {
     -- "--offset-encoding=utf-16",
   },
 }
+
+lspconfig.ts_ls.setup {
+  single_file_support = false,
+  filetypes = {
+    "javascript",
+    "typescript",
+    "vue",
+  },
+}
+
 lspconfig.asm_lsp.setup {
   filetypes = { "asm" },
 }
@@ -48,17 +58,13 @@ lspconfig.texlab.setup {
   filetypes = { "tex" },
 }
 
-lspconfig.ts_ls.setup {
-  filetypes = { "js", "ts" },
-}
-
 lspconfig.yamlls.setup {
   filetypes = { "yml", "yaml" },
 }
 
-lspconfig.tailwindcss.setup {
-  filetypes = { "js", "ts", "jsx", "tsx" },
-}
+-- lspconfig.tailwindcss.setup {
+--   filetypes = { "js", "ts", "jsx", "tsx" },
+-- }
 lspconfig.gopls.setup {
   filetypes = { "go" },
 }

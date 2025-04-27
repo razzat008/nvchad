@@ -19,9 +19,19 @@ M.treesitter = {
     "ssh_config",
     "go",
   },
+
   indent = {
     enable = true,
     -- disable = {},
+  },
+  textobjects = {
+    move = {
+      enable = true,
+      goto_next_start = { ["]f"] = "@function.outer", ["]c"] = "@class.outer", ["]a"] = "@parameter.inner" },
+      goto_next_end = { ["]F"] = "@function.outer", ["]C"] = "@class.outer", ["]A"] = "@parameter.inner" },
+      goto_previous_start = { ["[f"] = "@function.outer", ["[c"] = "@class.outer", ["[a"] = "@parameter.inner" },
+      goto_previous_end = { ["[F"] = "@function.outer", ["[C"] = "@class.outer", ["[A"] = "@parameter.inner" },
+    },
   },
 }
 
@@ -40,7 +50,7 @@ M.mason = {
     "clang-format",
     "deno",
     "typescript-language-server",
-    "tsserver",
+    "ts_ls",
     "tailwindcss-language-server",
     -- "cssmodules-language-server",
     -- "bash-language-server",

@@ -5,14 +5,14 @@ if not present then
 end
 
 local options = {
-  auto_load =  true,
-  filetype = {"markdown","vimwiki"},
+  auto_load = true,
+  filetype = { "markdown", "vimwiki" },
   syntax = true,
   throttle_time = "auto",
   close_on_bdelete = true,
   theme = "dark",
-  -- app = { "chromium", "--new-window" },
-  app = "webview",
+  app = { "chromium", "--new-window" },
+  -- app = "webview",
 }
 
 mpreview.setup(options)
