@@ -1,6 +1,7 @@
-local present, mpreview = pcall(require, "peek")
+local status, peek = pcall(require, "peek")
+local map = vim.keymap.set
 
-if not present then
+if not status then
   return
 end
 
@@ -15,10 +16,15 @@ local options = {
   -- app = "webview",
 }
 
-mpreview.setup(options)
-vim.api.nvim_create_user_command('PeekOpen', require('peek').open, {})
-vim.api.nvim_create_user_command('PeekClose', require('peek').close, {})
+peek.setup(options)
 
-local map = vim.keymap.set
+vim.api.nvim_create_user_command("PeekToggle", function()
+  if not peek.is_open() and vim.bo[vim.api.nvim_get_current_buf()].filetype == "markdown" then
+    -- vim.fn.system "i3-msg split horizontal"
+    peek.open()
+  elseif peek.is_open() then
+    peek.close()
+  end
+end, {})
 
-map("n", "<leader>mp", "<cmd>PeekOpen<CR>", { desc = "Toggle Markdown Preview" })
+map("n", "<leader>mp", "<cmd>PeekToggle<CR>", { desc = "Toggle Peek.nvim [Markdown Preview]" })
