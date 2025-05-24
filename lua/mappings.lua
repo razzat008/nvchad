@@ -2,7 +2,7 @@ require "nvchad.mappings"
 
 -- add yours here
 
-local map = vim.keymap.set
+map = vim.keymap.set
 local nomap = vim.keymap.del
 
 -- ❌ Disable bad defaults
@@ -65,6 +65,12 @@ map("n", "<leader>cr", function()
   local filename = vim.fn.expand("%:t"):match "^([^.]+)"
   require("nvterm.terminal").send("clear && rustc " .. file_path .. " && ./" .. filename, "vertical")
 end, { desc = "Rustc compile and run" })
+
+
+-- use latexmkd to compile latex document to pdf
+map("n","<leader>lx","<cmd>!latexmk -pdf " .. vim.fn.expand "%".. "2>&1 > /dev/null" .. "<CR>",
+  {desc = "Compile latex document into pdf"}
+)
 
 -- 🐍 Python run
 map("n", "<leader>bl", function()
