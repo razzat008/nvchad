@@ -18,6 +18,15 @@ return {
   -- 		},
   -- 	},
   -- },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    enabled = true,
+    config = function()
+      require("configs.copilot")
+    end,
+  },
 
   {
     "neovim/nvim-lspconfig",
@@ -62,7 +71,7 @@ return {
   },
 
   {
-    "phaazon/hop.nvim",
+    "smoka7/hop.nvim",
     event = "VeryLazy",
     keys = "s",
     enabled = true,

@@ -4,13 +4,15 @@
 local options = {
 
   base46 = {
-    theme = "onedark", -- default theme
+    theme = "bearded-arc", -- default theme
     hl_add = {},
-    hl_override = {},
+    hl_override = {
+      CmpBorder = { fg = "#808080", bg = "NONE" },
+    },
     integrations = {},
     changed_themes = {},
     transparency = false,
-    theme_toggle = { "onedark", "one_light" },
+    theme_toggle = { "bearded-arc", "one_light" },
   },
 
   ui = {
@@ -22,7 +24,7 @@ local options = {
       format_colors = { lsp = true, icon = "󱓻" },
     },
 
-    telescope = { style = "borderless" }, -- borderless / bordered
+    telescope = { style = "bordered" }, -- borderless / bordered
 
     statusline = {
       enabled = true,
@@ -47,13 +49,13 @@ local options = {
   nvdash = {
     load_on_startup = true,
     header = {
-    "                                                                        ",
-    "             ██████╗███████╗ █████╗ ███████╗███████╗██████╗             ",
-    "            ██╔════╝██╔════╝██╔══██╗██╔════╝██╔════╝██╔══██╗            ",
-    "            ██║     █████╗  ███████║███████╗█████╗  ██████╔╝            ",
-    "            ██║     ██╔══╝  ██╔══██║╚════██║██╔══╝  ██╔══██╗            ",
-    "            ╚██████╗███████╗██║  ██║███████║███████╗██║  ██║            ",
-    "             ╚═════╝╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝            ",
+      "                                                                        ",
+      "             ██████╗███████╗ █████╗ ███████╗███████╗██████╗             ",
+      "            ██╔════╝██╔════╝██╔══██╗██╔════╝██╔════╝██╔══██╗            ",
+      "            ██║     █████╗  ███████║███████╗█████╗  ██████╔╝            ",
+      "            ██║     ██╔══╝  ██╔══██║╚════██║██╔══╝  ██╔══██╗            ",
+      "            ╚██████╗███████╗██║  ██║███████║███████╗██║  ██║            ",
+      "             ╚═════╝╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝            ",
     },
 
     buttons = {
