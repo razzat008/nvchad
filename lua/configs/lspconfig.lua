@@ -16,6 +16,7 @@ local servers = {
   "yamlls",
   "tailwindcss",
   "asm_lsp",
+  "svelte",
 }
 
 vim.lsp.enable(servers)
